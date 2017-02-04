@@ -4,7 +4,7 @@
 * firefox 45
 * slimerjs 07282f2 (13 dec 2016)
 
-Uncompressed size: 203 MB
+Uncompressed size: 201 MB
 
 Usage:
 
