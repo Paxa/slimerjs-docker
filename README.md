@@ -13,6 +13,8 @@ Usage:
 
 ---
 
-## Building
+## Development
 
-To build you need to download slimerjs to `./slimerjs`, then run `docker build .`
+You need to init submodules first
+
+    git submodule update --init
