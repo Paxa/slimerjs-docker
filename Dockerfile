@@ -25,6 +25,4 @@ RUN \
 ls /usr/local/ -lah && \
 echo $'#!/usr/bin/env sh\n/usr/local/slimerjs/src/slimerjs $@' > /usr/bin/slimerjs && \
 chmod +x /usr/bin/slimerjs && \
-slimerjs --version
-
-RUN slimerjs /usr/local/slimerjs/examples/phantomjs/loadspeed.js http://google.com
+slimerjs /usr/local/slimerjs/examples/phantomjs/loadspeed.js http://google.com
