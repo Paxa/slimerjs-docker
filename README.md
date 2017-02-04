@@ -8,11 +8,8 @@ Uncompressed size: 201 MB
 
 Usage:
 
-```
-FROM slimerjs-alpine:latest
-
-RUN slimerjs /usr/local/slimerjs/examples/phantomjs/loadspeed.js http://google.com
-```
+    FROM evpavel/slimerjs-alpine:latest
+    RUN slimerjs /usr/local/slimerjs/examples/phantomjs/loadspeed.js http://google.com
 
 ---
 
