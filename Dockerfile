@@ -3,14 +3,9 @@ FROM alpine:latest
 MAINTAINER Pavel Evstigneev <pavel.evst@gmail.com>
 
 RUN \
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories && \
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
-
-RUN \
 # Install firefox and xvfb
 apk update && apk upgrade && \
-apk add xvfb bash firefox=51.0-r2 dbus ttf-freefont fontconfig && \
+apk add xvfb bash firefox-esr dbus ttf-freefont fontconfig && \
 rm -rf /var/cache/apk/*
 
 RUN \
