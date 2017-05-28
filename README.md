@@ -1,10 +1,10 @@
 ## Slimerjs with firefox and xvfb, runs on alpine linux
 
-* alpine 3.5
-* firefox 51
+* alpine 3.6
+* firefox 52
 * slimerjs 7b23189 (15 mar 2017)
 
-Uncompressed size: 226 MB
+Uncompressed size: 220 MB
 
 Usage:
 
