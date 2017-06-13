@@ -2,7 +2,7 @@
 
 * alpine 3.6
 * firefox 52
-* slimerjs 7b23189 (15 mar 2017)
+* slimerjs e886cab (30 may 2017)
 
 Uncompressed size: 220 MB
 
