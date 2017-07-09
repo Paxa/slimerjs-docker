@@ -1,5 +1,8 @@
 ## Slimerjs with firefox and xvfb, runs on alpine linux
 
+[![Docker Build Statu](https://img.shields.io/docker/build/evpavel/slimerjs-alpine.svg)](https://hub.docker.com/r/evpavel/slimerjs-alpine)
+[![Docker Pulls](https://img.shields.io/docker/pulls/evpavel/slimerjs-alpine.svg)](https://hub.docker.com/r/evpavel/slimerjs-alpine)
+
 * alpine 3.6
 * firefox 52
 * slimerjs e886cab (30 may 2017)
