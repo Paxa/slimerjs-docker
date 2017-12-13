@@ -1,24 +1,22 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 MAINTAINER Pavel Evstigneev <pavel.evst@gmail.com>
 
-RUN \
-# Install firefox and xvfb
-apk update && apk upgrade && \
-apk add xvfb bash firefox-esr dbus ttf-freefont fontconfig && \
-rm -rf /var/cache/apk/*
+RUN sed -i -e 's/v3\.7/edge/g' /etc/apk/repositories && \
+    echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
+
 
 RUN \
-# Create firefox + xvfb runner
-mv /usr/bin/firefox /usr/bin/firefox-origin && \
-echo $'#!/usr/bin/env sh\n\
-Xvfb :0 -screen 0 1920x1080x24 -ac +extension GLX +render -noreset & \n\
-DISPLAY=:0.0 firefox-origin $@ \n\
-killall Xvfb' > /usr/bin/firefox && \
-chmod +x /usr/bin/firefox
+# Install firefox
+apk update && apk upgrade && \
+apk add bash firefox dbus ttf-freefont fontconfig && \
+rm -rf /var/cache/apk/*
 
 # Install slimerjs
 COPY slimerjs /usr/local/slimerjs
+
+# Run firefox in HEADLESS mode
+ENV MOZ_HEADLESS=1
 
 # Make symlink for /usr/bin/slimerjs
 RUN \
